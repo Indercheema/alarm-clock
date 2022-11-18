@@ -1,0 +1,71 @@
+@import "./base.css";
+
+/* -------------------------------*/
+/*  Banner                        */
+/* -------------------------------*/
+
+:root {
+    --app-dark-bg: #1a1d28;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-purple: #833cff;
+    --app-orange: #ff833c;
+    --app-blue: #3c57ff;
+    --app-blue-hover: #364ee6;
+   }
+
+   body {
+    background-color: var(--app-dark-bg);
+   }
+
+.center {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    place-items: center;
+
+}
+
+
+.alarm {
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    line-height: 40px;
+    width: 140px;
+    border-radius: 6px;
+    border: 1px solid var(--app-green);
+    background-color: var(--app-green);
+    color: #000;
+    cursor: pointer;
+}
+
+.start:hover , .jump:hover {
+    background-color: var(--app-golden-hover);
+    transition: background-color 0.1s ease-in-out;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.mario {
+    visibility: hidden;
+}
+
+@keyframes jump {
+    0% , 100% {transform: translateY(0);}
+    50% {transform: translateY(-90px);}
+  }
+
+  .mario.new {
+    visibility: visible;
+    animation: jump 0.8s ease-in-out;
+  }
