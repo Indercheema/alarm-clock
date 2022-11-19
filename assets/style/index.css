@@ -36,6 +36,14 @@
 
 }
 
+.icon {
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+}
+
+
 
 .alarm {
     font-size: 15px;
@@ -72,11 +80,13 @@ input[type="text"] {
     text-align: center;
   }
 
-  .content {
+  .content  {
     display: flex;
     gap: 20px;
   }
 
-  i {
-    color: #fff;
+  .alarm-div {
+    display: flex;
+    justify-content: center;
   }
+
