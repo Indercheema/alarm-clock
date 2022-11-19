@@ -1,8 +1,6 @@
-@import "./base.css";
+@import "./reset.css";
 
-/* -------------------------------*/
-/*  Banner                        */
-/* -------------------------------*/
+
 
 :root {
     --app-dark-bg: #1a1d28;
@@ -16,6 +14,18 @@
 
    body {
     background-color: var(--app-dark-bg);
+   }
+   h2 {
+    font-size: 60px;
+   }
+
+   h2, p {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+   }
+   .message {
+    margin-top: 50px;
    }
 
 .center {
@@ -42,30 +52,31 @@
     cursor: pointer;
 }
 
-.start:hover , .jump:hover {
-    background-color: var(--app-golden-hover);
+.alarm:hover {
+    background-color: var(--app-orange);
+    border: 1px solid var(--app-orange);
     transition: background-color 0.1s ease-in-out;
 }
 
-img {
-    width: 300px;
-    height: 300px;
+input[type="text"] {
+    width: 140px;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
-.mario {
-    visibility: hidden;
-}
-
-@keyframes jump {
-    0% , 100% {transform: translateY(0);}
-    50% {transform: translateY(-90px);}
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
   }
 
-  .mario.new {
-    visibility: visible;
-    animation: jump 0.8s ease-in-out;
+  .content {
+    display: flex;
+    gap: 20px;
+  }
+
+  i {
+    color: #fff;
   }
